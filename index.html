@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/images/cockroach-dead.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cockroach Smash Game</title>
+</head>
+<body>
+  <div id="status">🟢 Online</div>
+  <div id="hud">
+    <span>Time: <span id="timer">0</span>s</span>
+    <span>Kills: <span id="score">0</span></span>
+    <button id="muteToggle">🔊</button>
+    <button id="settingsBtn">⚙️</button>
+  </div>
+  <button id="pauseBtn">⏸️</button>
+  
+  <div id="gameArea">
+    <div id="speedUpNotification">⚡ Speed Increasing!</div>
+    <div id="notifications"></div>
+  </div>
+  
+  <div id="startScreen">
+    <h1>Cockroach Smash!</h1>
+    <button class="btn" id="startBtn">START GAME</button>
+    <button class="btn" id="settingsBtnMain">SETTINGS</button>
+    <button class="btn" id="installBtn" style="display: none;">INSTALL APP</button>
+  </div>
+  
+  <div id="pauseScreen">
+    <h1>Game Paused</h1>
+    <button class="btn" id="resumeBtn">RESUME</button>
+    <button class="btn" id="restartBtn">RESTART</button>
+    <button class="btn" id="quitBtn">QUIT TO MENU</button>
+  </div>
+  
+  <div id="settingsScreen">
+    <h1>Game Settings</h1>
+    
+    <div class="settings-option">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+    
+    <div class="settings-option">
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    </div>
+    
+    <div class="settings-option">
+      <label for="cursor">Cursor Style:</label>
+      <select id="cursor">
+        <option value="slipper">Slipper</option>
+        <option value="hand">Hand</option>
+        <option value="hammer">Hammer</option>
+      </select>
+    </div>
+    
+    <button class="btn" id="saveSettingsBtn">SAVE SETTINGS</button>
+    <button class="btn" id="cancelSettingsBtn">CANCEL</button>
+  </div>
+
+  <audio id="bgMusic" src="assets/sounds/background.mp3" loop></audio>
+  <audio id="squishSound" src="assets/sounds/squish.mp3"></audio>
+  
+  <script src="app.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

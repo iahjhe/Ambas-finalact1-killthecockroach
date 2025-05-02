@@ -1,0 +1,52 @@
+{
+  "name": "Cockroach Smash",
+  "short_name": "KillRoaches",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f0e4d7",
+  "theme_color": "#ff5722",
+  "description": "Smash cockroaches in this addictive game!",
+  "icons": [
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/cockroach-dead.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
